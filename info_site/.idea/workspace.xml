@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="09f20bfb-7ade-4c84-bac2-a3001313820b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/templates/account/login-register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flower_shop/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flower_shop/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flower_shop/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flower_shop/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flower_shop/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/templates/products/add_product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/templates/products/edit_product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/templates/products/product_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/images/B Araz.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/images/WallpaperGram.IR_1562081088_z93097.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/images/green-background-ivfksvptao7sdhrg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/images/img-login.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/images/leave1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/images/leave2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/images/تصویر-زمینه-سبز.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/styles/styles.css" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2nWKw1zZ5owdLmp10DuiKBgb5vP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
+        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09f20bfb-7ade-4c84-bac2-a3001313820b" name="Changes" comment="" />
+      <created>1729083627391</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729083627391</updated>
+      <workItem from="1729083653597" duration="1311000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

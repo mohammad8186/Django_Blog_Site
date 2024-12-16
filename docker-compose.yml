@@ -1,0 +1,31 @@
+
+services:
+  db:
+    image: postgres:14
+    volumes:
+      - postgres_data_info:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: infodb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 09902048023M.sh
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      POSTGRES_DB: infodb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 09902048023M.sh
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+
+volumes:
+  postgres_data_info:

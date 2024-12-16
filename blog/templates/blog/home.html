@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero">
+    <h1>Welcome to My Blog</h1>
+    <p>Your one-stop destination for insightful articles and discussions.</p>
+    <a href="{% url 'post_list' %}" class="btn">View Blogs</a>
+</section>
+<section class="features">
+    <h2>Our Goals</h2>
+    <div class="feature-item">
+        <h3>Inform</h3>
+        <p>Providing quality content to inform and educate.</p>
+    </div>
+    <div class="feature-item">
+        <h3>Engage</h3>
+        <p>Encouraging community engagement through comments.</p>
+    </div>
+    <div class="feature-item">
+        <h3>Inspire</h3>
+        <p>Inspiring readers to explore and learn more.</p>
+    </div>
+</section>
+{% endblock %}

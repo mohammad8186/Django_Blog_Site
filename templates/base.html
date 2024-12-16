@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+ <html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Blog{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+
+            background-image: url("{% static 'background_image/background_image.jpg' %}");
+            background-size: cover;
+            background-attachment: fixed;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+
+            {% if request.resolver_match.url_name == 'post_list' %}
+            <form method="GET" action="{% url 'post_list' %}" style="display: flex; justify-content: center; flex-grow: 1;">
+                <input type="text" name="search" placeholder="Search by title" style="width: 250px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px;">
+                <button type="submit" style="background-color: #0066cc; height: 35px; color: white; padding: 1px 15px; border: none; border-radius: 4px; cursor: pointer;">
+                    Search
+                </button>
+            </form>
+            {% endif %}
+            
+            <ul>
+                
+                {% if user.is_authenticated %}
+                    <li> <a href="{% url 'post_create' %}">Create_Post</a></li>
+                    <li><a href="{% url 'post_list' %}">blog</a></li>
+                    <li><a href="{% url 'user_logout' %}">Logout</a></li>
+                    <li><a href="{% url 'profile_view' user.username %}">Profile</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>  
+                
+                {% else %}
+                    <li><a href="{% url 'user_login' %}">Login</a></li>
+                    <li><a href="{% url 'user_register' %}">Register</a></li>
+                    <li><a href="{% url 'post_list' %}">blog</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 blog site. All rights reserved.</p>
+            <a href="https://github.com/mohammad8186" target="_blank" class="github-link">
+                <i class="fab fa-github github-logo"></i> <!-- GitHub Font Awesome Icon -->
+            </a>
+        </div>
+    </footer>
+
+    <script src="{% static 'blog/js/scripts.js' %}"></script>
+
+</body>
+</html>

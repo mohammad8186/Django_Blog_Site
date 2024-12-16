@@ -1,0 +1,22 @@
+<body>
+
+
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Are you sure you want to delete this post?</h3>
+        <div class="modal-actions">
+            <button class="btn-cancel" onclick="closeModal()">No</button>
+            <form method="post" id="deleteForm">
+                {% csrf_token %}
+                <button type="submit" class="btn-delete-confirm">Yes, Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src = "{%  static 'blog/js/script.js'}">
+    
+</script>
+
+</body>
+

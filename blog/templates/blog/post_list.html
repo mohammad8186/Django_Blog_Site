@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="post-list-text">
+    <h1>The latest Posts &#128512;</h1>
+ </div>
+<div class="post-list-container">
+  {% for post in posts %}
+    <div class="post">
+
+        {% if post.image %}
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-image-list">
+        {% else %}
+        <img src="{% static 'default_images/default_image_post.png' %}" alt="Default image" class="post-image-list">
+        {% endif %}
+
+      <div class="post-header">
+        {% if post.author.profile_pic %}
+        <img src="{{ post.author.profile_pic.url }}" alt="{{ post.author.username }}'s avatar" class="avatar">
+        {% else %}
+        <img src="{% static 'default_images/default_image_avatar.png' %}" alt="defalut_image_avatar" class = "defalut_image_avatar_class">
+        {% endif %}
+        <div class="post-info">
+          <h2><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
+          <p><i class="fa fa-user"></i>By {{ post.author.username }}</p>
+          <p><i class="fa fa-clock"></i> {{ post.date_posted }}</p>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>{{ post.content|slice:":30" }}...</p>
+        <a href="{% url 'post_detail' post.id %}" class="read-more-btn">Read more</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,355 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/static/images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Helvetica', sans-serif;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(0, 102, 204, 0.9); /* Semi-transparent navy blue */
+    padding: 20px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00; /* Yellow hover effect */
+}
+
+
+
+/* Content Container */
+.content {
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Post List */
+.post-list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 10px;
+  }
+  
+  .post-list-container .post {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .post-list-container .post-image {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px; /* Add space between image and post content */
+  }
+  
+  .post-list-container .post-header {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .post-list-container .avatar {
+    width: 50px; /* Adjust avatar size as needed */
+    height: 50px; /* Adjust avatar size as needed */
+    border-radius: 50%;
+    float: left; /* Make the avatar float to the left */
+    margin-right: 10px; /* Add some margin between avatar and username */
+    object-fit: cover;
+  }
+  
+  .post-list-container .post-info h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .post-list-container .post-info p {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+  }
+  
+  .post-list-container .post-info i.fa-clock {
+    margin-right: 5px;
+  }
+  
+  .post-list-container .post-content {
+    margin-top: 10px;
+  }
+  
+  .post-list-container .post-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .read-more-btn {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #003366;
+  }
+  
+  .post-list-container .post:hover {
+    animation: fadeIn 0.3s ease-in-out;
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  @media (max-width: 768px) {
+    .post-list-container {
+      grid-template-columns: 1fr;
+    }
+  }
+/* Post Detail */
+.post-detail {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-detail h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.post-detail .post-content {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.comments {
+    margin-top: 30px;
+}
+
+.comments p {
+    background-color: rgba(240, 240, 240, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.comments p strong {
+    color: #333;
+}
+
+/* Forms (Post Create/Edit, Comment Form, Profile Update) */
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #0066cc;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+form textarea {
+    height: 150px;
+}
+
+form .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form .btn:hover {
+    background-color: #218838;
+    transform: scale(1.02);
+}
+
+/* Profile */
+.image_avatar_profile {
+    width: 50px; /* Adjust avatar size as needed */
+    height: 50px; /* Adjust avatar size as needed */
+    border-radius: 50%;
+    float: left; /* Make the avatar float to the left */
+    margin-right: 10px; /* Add some margin between avatar and username */
+    object-fit: cover;
+  }
+  
+  
+.profile-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+}
+
+.user-posts {
+    margin-top: 30px;
+}
+
+.user-posts .post {
+    background-color: rgba(240, 240, 240, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.user-posts .post h4 {
+    font-size: 20px;
+    color: #0066cc;
+    margin: 0;
+}
+
+
+/* Login/Register */
+.login-container, .register-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2, .register-container h2 {
+    font-size: 24px;
+    color: #0066cc;
+    margin-bottom: 30px;
+}
+
+.login-container input, .register-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-container button, .register-container button {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-container button:hover, .register-container button:hover {
+    background-color: #003366;
+    transform: scale(1.02);
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .form-container, .profile-container, .login-container, .register-container {
+        padding: 15px;
+    }
+
+    .post-list-container .post {
+        margin: 10px 0;
+    }
+
+    .user-posts .post {
+        margin-bottom: 5px;
+    }
+}

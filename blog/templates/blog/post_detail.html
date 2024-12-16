@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="post-detail">
+
+    {% if post.image %}
+    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-image-detail">
+    {% else %}
+    <img src="{% static 'default_images/default_image_post.png' %}" alt="Default image" class="post-image-detail">
+    {% endif %}
+
+    <h2>{{ post.title }}</h2>
+    
+    <p><i class="fa fa-user"></i> {{ post.author }} on <i class="fa fa-clock"></i> {{ post.date_posted }}</p>
+    <div class="post-content">{{ post.content }}</div>
+
+    <h3>Comments:</h3>
+    <div class="comments">
+        {% for comment in comments %}
+            <p><i class="fa fa-user"></i><strong>{{ comment.author }}</strong>: {{ comment.content }}</p>
+        {% empty %}
+            <p>No comments yet.</p>
+        {% endfor %}
+    </div>
+
+    {% if user.is_authenticated %}
+        <form method="post" class ="comment-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Submit Comment</button>
+        </form>
+    {% else %}
+        <p>Please <a href="{% url 'user_login' %}">log in</a> to comment.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="register-container">
+    <h2>Register</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+        
+        {% if form.password1.errors %}
+            <div class="error-message" style="color: red;">
+                {{ form.password1.errors|join:", " }}
+            </div>
+        {% endif %}
+        
+        {% if form.password2.errors %}
+            <div class="error-message" style="color: red;">
+                {{ form.password2.errors|join:", " }}
+            </div>
+        {% endif %}
+        
+        <button type="submit" class="btn">Register</button>
+    </form>
+</div>
+{% endblock %}

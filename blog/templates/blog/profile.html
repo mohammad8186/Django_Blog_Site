@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{{ user.username }}'s Profile</h2>
+    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="profile-avatar-section">
+            {% if user.profile_pic %}
+            <img src="{{ user.profile_pic.url }}" alt="{{ user.username }}'s avatar" class="image_avatar_profile">
+            {% else %}
+            <img src="{% static 'blog/default_images/default_image_avatar.png' %}" alt="default_image_avatar" class="image_avatar_profile">
+            {% endif %}
+            
+        </div>
+        {{ form.as_p }}
+        <button type="submit" class="btn">Update Profile</button>
+    </form>
+
+    <h3>Posts by {{ user.username }}</h3>
+    <div class="post-grid">
+        {% for post in posts %}
+        <div class="post-card">
+            <div class="post-image">
+                {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="image_post_profile">
+                {% else %}
+                    <img src="{% static 'blog/default_images/default_image_post.png' %}" alt="default image">
+                {% endif %}
+            </div>
+            <div class="post-info">
+                <h4><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h4>
+                <div class="post-actions">
+                    <a href="{% url 'post_update' post.id %}" class="btn-edit">Edit</a>
+                    <a href="javascript:void(0)" class="btn-delete" onclick="openModal('{{ post.id }}')">Delete</a>
+                    <hr class="Rounded">
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include 'blog/confirm_delete.html' %}
+
+{% endblock %}
