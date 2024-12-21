@@ -1,4 +1,4 @@
 .idea/
 blog/__pycache__/
 info_site/__pycache__/
-staticfiles
+staticfiles/admin
